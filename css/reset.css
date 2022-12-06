@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* 내장폰트연결 */
+@font-face {
+    font-family: "pretendard";
+    src: url(../fonts/Pretendard/Pretendard-Bold.otf);
+    src: url(../fonts/Pretendard/Pretendard-SemiBold.otf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "pretendard";
+    src: url(../fonts/Pretendard/Pretendard-Medium.otf);
+    src: url(../fonts/Pretendard/Pretendard-Regular.ttf);
+    font-weight: 500;
+
+}
+
+@font-face {
+    font-family: "pretendard";
+    src: url(../fonts/Pretendard/Pretendard-Light.otf);
+    src: url(../fonts/Pretendard/Pretendard-Thin.otf);
+    font-weight: 200;
+
+}
+
+
+
+
+@font-face {
+    font-family: "BrownStd";
+    src: url(../fonts/BrownStd/BrownStd-Regular/BrownStd-Regular.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "silk-serif";
+    src: url(../fonts/silk-serif/Silk-Serif-Black.otf);
+    src: url(../fonts/silk-serif/Silk-Serif-Bold.otf);
+    src: url(../fonts/silk-serif/Silk-Serif-SemiBold.otf);
+    font-weight: 800;
+
+}
+@font-face {
+    font-family: "silk-serif";
+    src: url(../fonts/silk-serif/Silk-Serif-Medium.otf);
+    src: url(../fonts/silk-serif/Silk-Serif-Regular.otf);
+    font-weight: 400;
+
+}
+@font-face {
+    font-family: "silk-serif";
+    src: url(../fonts/silk-serif/Silk-Serif-Light-Italic.otf);
+    src: url(../fonts/silk-serif/Silk-Serif-Light.otf);
+    font-weight: 200;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+ol,ul,li{
+    list-style: none;
+}
+img,svg,video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+html,body{
+    /* 기본폰트 내맘대로 변경(전체적용) */
+    font-family: "brownstd";
+    font-size: 100%;
+    
+    /* 가로 스크롤 생길거 방지차 미리 만들어둠 */
+    /* overflow-x: hidden; */
+}

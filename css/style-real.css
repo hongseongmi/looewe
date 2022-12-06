@@ -1,0 +1,1023 @@
+@charset "utf-8";@charset "utf-8";
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url(https://cdn.jsdelivr.net/npm/fullpage.js@2.9.4/dist/jquery.fullpage.min.js);
+/* #wrap{
+   
+} */
+
+.container{
+    height: 100vh;
+}
+
+#hamburger{
+    display: none;
+    /* 전체스타일링때는 일단 가려두고, 햄버거 버튼이 필요한 부분에서 미디어쿼리로 블록으로 바꿔준 뒤 세부설정 해주기 */
+}
+
+/* 배너영역 */
+
+/* header-area 영역 */
+.banner{
+    width: 100%;
+    height: 100vh;   
+    background: url(../img/banner-bg2.jpeg) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-area{
+    width: 100%;
+    height: 80px;
+    /* background-color: aquamarine; */
+    /* 임시 배경색 */
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.header-area a.active{
+    color: #262320;
+}
+
+.header-area .header-menu,
+.header-area a,
+.icon-box{
+    display: flex;
+    color: #fff;
+}
+
+.header-logo{
+    width: 180px;
+    height: 40px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   fill: #fff;
+}
+
+.header-logo.active{
+    fill: #262320;
+}
+.header-area .header-menu{
+    margin-left: 5%;
+}
+.header-area .header-menu li,
+.header-area .icon-box .icon{
+    margin-right: 17px;
+}
+.header-area .icon-box{
+    margin-right: 5%;
+}
+
+/* banner-txt 영역 */
+.banner-txt{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    
+}
+.banner-txt-logo svg{
+    width: 400px;
+}
+.banner-txt p{
+    margin-top: 10%;
+    text-shadow: 0px 0px 20px #000000bd;
+    /* 박스쉐도우처럼 X축,Y축, 블러, 컬러이다. */
+}
+.banner-txt a{
+    display: inline-block;
+    color: #fff;
+    margin: 10% 2%;
+    transition: 0.5s;
+    text-shadow: 3px 0px 20px #000000cc;
+}
+
+.banner-txt a:hover{
+    text-decoration: underline;
+    /* 리셋파일에서 밑줄 지워버린거 다시 그어주는 속성 */
+   
+}
+
+/* 서브메뉴 영역 */
+
+/* 돌아가면서 가려놓고 보기 */
+/* #tab1,
+#tab2,
+#tab3,
+#tab4{
+    display: none;
+} */
+
+.sub-menu-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.sub-menu-box.active{
+    opacity: 1;
+    z-index: 99;
+}
+
+.sub-menu-box .menu-left img{
+    width: 300px;
+    height: 350px;
+    margin-left: 160px;
+}
+.sub-menu-box .menu-right{
+    margin-right: -10%;
+}
+.sub-menu-box .ss23 .menu-right{
+    margin-right: -20%;
+}
+.sub-menu-box .sale .menu-right{
+    margin-right: -19%;
+}
+
+
+/* .sub-menu-box .sub-menu{
+    width: 67vw;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    z-index: 99;
+    오퍼시티 0처리 해줌으로써 내용을 가려줬음.
+    액티브 추가한 곳에 오퍼시티 1으로 보여줄거고
+    헤더메뉴를 다른거로 옮길때 지워지도록 사라져야 하기 때문에 오퍼시티로 가려준것이다.
+}  */
+
+.sub-menu-box .sub-menu{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    /* justify-content: space-between; */
+    opacity: 0;
+    z-index: 99;
+    background-color: #fff;
+    padding: 5% 0;
+    transition: 0.2s;
+    
+}
+.sub-menu-box .sub-menu.active{
+    opacity: 1;
+}
+.sub-menu-detail{
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+.sub-menu-head{
+    width: 200px;
+    margin-right: 80px;
+}
+.sub-menu-head p{
+    font-size: 1.2rem;
+}
+.sub-menu-body{
+    color: #a8a8a8;
+    margin-top: 10%;
+}
+
+.icon.active{
+    color: #262320;
+}
+
+
+
+/* sec-1 영역*/
+.sec-1{
+    background-color: #e4dbd6;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+}
+.sec-1 .container{
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15%;    
+}
+
+.sec_1.left .sec-1 img{
+    width: 700px;
+    /* height: 222px; */
+}
+.sec_1.left{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 20%;
+}
+.sec-1-txt{
+    width: 385px;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+
+.sec-1.right .mask{
+    width: 20vw;
+    height: 70vh;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    overflow: hidden;
+}
+
+
+/* sec-2 영역 */
+.sec-2{
+    background-color: #b1c9d8;
+    position: relative;
+}
+
+.sec-2 .canvas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.sec-2 .cell-box{
+    display: flex;
+    align-items: center;
+    animation: infinite 60s linear infinite;
+}
+
+@keyframes infinite{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
+.sec-2 .cell{
+    width: 250px;
+    height: 350px;
+    position: relative;
+}
+.sec-2 .cell:nth-child(even){
+    margin-top: 75px;
+}
+.sec-2 .cell:nth-child(odd){
+    margin-top: -20px;
+}
+.sec-2 .cell-name {
+    /* border: 1px solid #fff; */
+    /* 임시보더값 */
+    text-align: center;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 7px rgb(0 0 0 / 44%);
+}
+
+.sec-2-txt{
+    font-family: "silk-serif";
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 300;
+    width: 804px;
+    position: absolute;
+    /* top: -2%; */
+    left: 31%;
+    text-align: center;
+    margin-top: 161px;
+    letter-spacing: 1px;
+}
+
+.sec-2 .prev-btn{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 306px;
+    font-size: 3rem;
+    text-align: center;
+}
+.sec-2 .prev{
+    margin-right: 20%;
+}
+.sec-2 .prev-btn a{
+    color: #fff;
+    font-family: "silk-serif";
+    font-size: 1.5rem;
+}
+.sec-2 .prev::before{
+    content: '\f104';
+    font-family: fontawesome;
+    /* 유니코드 쓸때 뒤에다가 꼭 폰트패밀리 폰트어썸 연결해주기 */
+    margin-right: 20px;
+}
+
+.sec-2 .next::after{
+    content: "\f105";
+    font-family: fontawesome;
+    margin-left: 20px;
+}
+
+/* sec-3 */
+.sec-3{
+    position: relative;
+    
+}
+.sec-3 .container{
+    position: relative;
+    /* background-attachment: fixed; */
+}
+
+.sec-3-btn{
+    font-size: 1.5rem;
+    color: orange;
+    position: absolute;
+    bottom: 10.5%;
+    right: 15.1%;
+}
+
+.svg-wrapper{
+    position: absolute;
+    bottom: 10%;
+    right: 13.5%;
+    width: 160px;
+    height: 50px;
+    z-index: 999;
+    /* svg 전체 묶는 이 .svg-wrapper가 a보다 위에 있어야 정상적으로
+    내가 원하는 SVG애니메이션을 만들어 줄 수 있다. 그렇기 때문에 z-index값을 줘야만 한다.*/
+}
+rect{
+    width: 160px;
+    height: 50px;
+
+}
+
+.shape{
+    fill: transparent;
+    stroke: orange;
+    stroke-width: 5px;
+    stroke-dasharray: 106 600;
+    stroke-dashoffset: -236;
+    margin-bottom: 10px;
+    opacity: 0.3;
+}
+
+.shape:hover{
+    animation: draw 0.5s linear forwards;
+    opacity: 1;
+}
+@keyframes draw {
+    0%{
+        stroke-width: 5px;
+    stroke-dasharray: 144 600;
+    stroke-dashoffset: -224;
+
+    
+    }
+    100%{
+        /* 애니메이션이 진행됐을때 마지막으로 보일 부분 */
+        stroke-width: 4px;
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+    }
+}
+  
+
+    /* sec-4 */
+.sec-4 .container{
+    background: url(../img/img.jpg) no-repeat center ;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    /* 스타벅스처럼 백그라운드를 딱 고정시켜주는 속성 */
+}
+
+.sec-4-txt{
+    width: 1169px;
+    height: 468px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sec-4-bottom{
+    font-family: "silk-serif";
+    color: #fff;
+    margin-top: 75px;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-align: end;
+  
+}
+
+/* sec-5 */
+.sec-5 .container{
+    position: relative;
+}
+.sec-5 .head-txt{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 5rem;
+    font-family: 'silk-serif';
+}
+.sec-5 .box{
+    width: 400px;
+    height: 500px;
+}
+
+.sec-5 .store-left{
+   display: flex;
+   position: absolute;
+   top: 25%;
+   left: 10%;
+}
+
+.sec-5 .store-left .box2{
+    margin-top: 132px;
+    margin-left: 15px;
+}
+.sec-5 .store-right{
+    position: absolute;
+    top: 25%;
+    right: 10%;
+}
+
+.sec-5 .box{
+    position: relative;
+}
+.sec-5 .shop{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+    width: 80px;
+    height: 40px;
+    transition: 0.1s;
+}
+.sec-5 .shop:hover{
+  background-color: #fff;
+  
+}
+.sec-5 .shop a{
+    color: #fff;
+    line-height: 40px;
+    margin-left: 23%;
+    font-family: "silk-serif";
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.sec-5 .shop:hover a{
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.9);
+    
+}
+.sec-5 .box p{
+    position: absolute;
+    top: 10%;
+    left: 27%;
+    font-size: 2rem;
+    color: #fff;
+    font-family: "silk-serif";
+
+}
+.sec-5 .box2 p{
+    left: 33%;
+}
+
+/* footer */
+.footer .container{
+    position: relative;
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+   padding: 50px 50px;
+    margin-top: 50px;
+}
+
+.border-line{
+    width: 80vw;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.footer .box-inner-txt-left{
+    width: 769px;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+}
+.footer .box-inner-txt-left a{
+   color: #a8a8a8;
+  
+  
+}
+.footer h1:first-child{
+    margin-bottom: 10px;
+}
+
+
+.footer .box-inner-txt-right{
+    width: 341px;
+    height: 92px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.5rem;
+    padding: 50px 0; 
+}
+
+.top-btn{
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    width: 100px;
+    height: 100px;
+    animation: topbtn 15s linear infinite;
+}
+
+.top-btn::after {
+    content: "";
+    background: url(../img/hey.svg) no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+@keyframes topbtn {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:1700px) {
+    .sec-1 img{
+        width: 630px;
+    }
+
+    .sec-2-txt{
+        left: 26%;
+    }
+    .sec-4-txt{
+        width: 1000px;
+    }
+}
+@media (max-width : 1360px) {
+    /* sub-menu */
+    .sub-menu-box .menu-left img{
+        width: 250px;
+        margin-top: 4%;
+    }
+    .sub-menu-box .menu-right{
+        font-size: 0.9rem;
+    }
+    .sub-menu-head{
+        margin-top: 2%;
+    }
+
+    /* sec-1 */
+    .sec-1 .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec-1 .mask{
+        width: 23vw;
+    }
+
+    /* sec-2 */
+    .sec-2-txt{
+        left: 20%;
+        font-size: 1.1rem;
+    }
+    .sec-2 .prev-btn{
+        left: 49%;
+        transform: translateX(-49%);
+    }
+    /* sec-3 */
+    .sec-3 .svg-wrapper{
+        right: 13%;
+    }
+    .sec-3 .btn{
+        right: 15%;
+    }
+    /* sec-4 */
+    .sec-4-txt{
+        width: 800px;
+    }
+    /* sec-5 */
+    .sec-5 .box{
+        width: 300px;
+        height: 400px;
+        transition: 0.5s;
+    }
+    .sec-5 .box p{
+        left: 24%;
+        font-size: 1.75rem;
+    }
+    .sec-5 .box2 p{
+        left: 30%;
+    }
+
+    /* footer */
+    .footer .container{
+        padding: 50px 0;
+    }
+    .footer .box-inner-txt-left{
+        font-size: 0.5rem;
+        justify-content: space-evenly;
+    }
+    .footer .box-inner-txt-right{
+        right: -12%;
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width:1100px) {
+
+    .banner-txt a{
+        margin: 6% 2%;
+        height: 70px;
+    }
+    .sec_1.left .sec-1 img{
+        width: 500px;
+    }
+    .sec-1 .right .mask{
+        width: 25vw;
+        height: 65vh;
+    }
+    .sec-1 .txt{
+        width: 358px;
+        margin-top: 20px;
+    }
+    .sec-1 .container{
+        margin-top: 20px;
+    }
+
+    .sec-2 .cell{
+        width: 200px;
+        height: 300px;
+
+    }
+    .sec-2 .cell-name{
+        height: 50px;
+    }
+    .sec-2-txt{
+        left: 12%;
+    }
+    .sec-3 .svg-wrapper{
+        right: 12%;
+    }
+    .sec-4-txt{
+        width: 700px;
+    }
+
+    .sec-5 .box{
+        width:250px;
+        height: 350px;
+    }
+    .sec-5.head-txt{
+        font-size: 4rem;
+        top: 15%;
+    }
+    .sec-5 .box p{
+        left: 20%;
+        font-size: 1.6rem;
+    }
+    .sec-5 .box2 p{
+        left: 27%;
+    }
+    .sec-5 .shop{
+        width: 60px;
+        height:35px ;
+    }
+    .sec-5 .shop a{
+        margin-left: 17%;
+        font-size: 0.9rem;
+    }
+    .footer .box-inner-txt-left{
+        font-size: 0.7rem;
+        /* justify-content: space-between; */
+    }
+    .footer .box-inner-txt-right{
+        right: -23%;
+        font-size: 0.4rem;
+    }
+}
+@media (max-width:820px) {
+    #hamburger{
+        display: block;
+        z-index: 999;
+        width: 30px;
+        height: 30px;
+        /* background-color: red; */
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+    #hamburger span{
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    #hamburger span.active{
+        background-color:#7ea6bf;
+    }
+    #hamburger span:nth-child(1){
+        width: 2.2rem;
+        top: 0;
+        left: 0;
+    }
+    #hamburger span:nth-child(2){
+     
+        top: 30%;
+        left: 0;
+    }
+    #hamburger span:nth-child(3){
+        width: 1rem;
+        top: 60%;
+        left: 0;
+    }
+
+   .header-area .header-menu,
+   .icon-box{
+        display: none;
+    }
+    
+    .header-area .header-menu{
+        background-color: #e4edf2;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: #000;
+        transition: 0.5s;
+        font-size: 6vw;
+        /* 1000px 기준 80px  */
+        flex-direction: column;
+        padding: 20% 10%;
+        /* 좌우 1000px 기준 100px */
+        justify-content: space-evenly;
+        transition: 0.5s;
+        transform: translateY(-100%);
+
+    }
+    .header-area .header-menu.active{
+        transform: translateY(0);
+    }
+    .banner-txt-logo svg{
+        display: none;
+    }
+    .banner-txt p{
+        width: 400px;
+    }
+    /* sec-1 */
+    .sec-1 .container{
+        display: block;
+        margin-top: 15%;
+    }
+    .sec_1.left{
+        justify-content: center;
+        margin-right: 0;
+    }
+    .sec_1.left .sec-1 img {
+        width: 350px;
+    }
+    .sec-1 .right .mask{
+        width: 33vw;
+        height: 60vh;
+    }
+    .sec-1-txt{
+        line-height: 15px;
+        font-size: 0.9rem;
+        padding: 2% 0;
+    }
+    .sec-1 .mask{
+        width: 30vw;
+        height: 50vh;
+    }
+    /* sec-2 */
+    
+    .sec-2 .container{
+        height: auto;
+    }
+    .sec-2 .cell-box{
+        animation: none;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .sec-2 .box2{
+        display: none;
+    }
+    .sec-2-txt{
+        display: none;
+    }
+    .sec-2 .prev-btn{
+        display: none;
+    }
+    .sec-2 .cell:nth-child(even){
+        margin-top: 0;
+    }
+    .sec-2 .cell:nth-child(odd){
+        margin-top: 0;
+    }
+    .sec-2 .cell{
+        width: 50%;
+        height: 50%;
+        object-position: center top;
+
+    }
+
+    /* sec-3 */
+    .sec-3-btn{
+        font-size: 1.3rem;
+    }
+    .sec-3 .shape{
+        stroke-dasharray: 90 600 ;
+        stroke-dashoffset: -180;
+    }
+    .sec-3 .svg-wrapper{
+        width: 125px;
+        height: 40px;
+        right: 13%;
+
+    }
+    rect{
+        width: 125px;
+        height: 40px;
+    }
+
+    /* sec-4 */
+    .sec-4-txt{
+        width: 550px;
+    }
+
+    /* sec-5 */
+    .sec-5 .container{
+        left: -8%;
+    }
+    .sec-5 .store-right {
+        display: none;
+    }
+    .sec-5 .store-left{
+        left: 20%;
+        top: 35%;
+        margin-right: 10%;
+    }
+    .sec-5 .store-left .box2{
+        margin-top: 0;
+        margin-left: 60px;
+    }
+    .sec-5 .box{
+        width: 290px;
+        height: 400px;
+    }
+    .sec-5 .head-txt{    
+        top: 28%;
+        left: 20%;
+        font-size: 3rem;
+
+    }
+
+    .sec-5 .shop a {
+        line-height: 36px;
+        font-size: 0.9rem;
+        margin-left: 17%;
+    }
+
+    /* footer */
+    .border-line{
+        display: none;
+    }
+    .footer .box-inner-txt-left{
+        width: 100%;
+        height: 100%;
+        display: block;
+        line-height: 20px;
+    }
+
+
+    .footer .box-inner-txt-right{
+        right: -14%;
+        bottom: -4px;
+        font-size: 0.5rem;
+    }   
+    .footer .box-inner-txt{
+        padding: 5% 0;
+        border-bottom: 1px solid #26232069;    
+    }
+}
+@media (max-width:500px) {
+    /* banner */
+    .banner-txt-logo svg{
+        display: none;
+    }
+
+    .banner-txt p{
+        width: 400px;
+        margin-top: 0;
+        text-shadow: 0px 0px 20px #000000d6;
+    }
+    .banner-txt a{
+        height: 60px;
+    }
+    /* sec-1 */
+    .sec-1 img{
+        width: 300px;
+    }
+    .sec-1 .right .mask{
+        width: 45vw;
+        height: 55vh;
+    }
+    .sec-1-txt{
+        padding: 4% 0;
+    }
+    /* sec-2 */
+
+    .sec-2 .cell{
+        width: 100%;
+        height: 100%;
+    }
+    .sec-2 .cell-name{
+        font-size: 1.75rem;
+    }
+        /* sec-3 */
+    .sec-3.svg-wrapper{
+        width: 115px;
+        right: 11%;
+    }
+    .sec-3-btn{
+        right: 16%;
+    }
+    /* sec-4 */
+    .sec-4-txt{
+        width: 400px;
+    }
+    .sec-4-bottom{
+        margin-top: 20px;
+        font-size: 1.25rem;
+    }
+    /* sec-5 */
+    .sec-5 .box{
+        width: 200px;
+        height: 300px;
+    }
+    .sec-5 .store-left{
+        left: 11%;
+        top: 40%;
+    }
+    .sec-5 .head-txt{
+        top: 22%;
+        left: 11%;
+    }
+    .sec-5 .box p{
+        left: 13%;
+    }
+    .sec-5 .box2 p{
+        left: 25%;
+    }
+    .sec-5 .container{
+        height: 58vh;
+    }
+
+    .box-inner-txt-right{
+        display: none;
+    }
+}
+
